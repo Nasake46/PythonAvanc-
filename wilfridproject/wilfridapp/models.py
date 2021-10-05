@@ -22,4 +22,8 @@ class CheckWebsite(models.Model):
 
 class WebsiteListView(models.Model):
     model = Website
+
+class WebsiteForm(models.Model):
+    host = models.CharField(label='Website hostname',
+                           max_length=512)
     
