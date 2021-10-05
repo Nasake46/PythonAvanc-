@@ -8,9 +8,12 @@ from wilfridapp.models import CheckWebsite
 @admin.register(Website)
 class WebsiteAdmin(admin.ModelAdmin):
     list_display = ("host", "is_up", "last_check")
-    list_filter = ("is_unhelpfull", "is_corrected", "is_valid", "is_shared")
+    list_filter = ("host", "is_up", "last_check")
+    search_fields = ("host", "is_up", "last_check")
 
 
 @admin.register(CheckWebsite)
 class CheckAdmin(admin.ModelAdmin):
     list_display = ("website", "date", "is_up", "message")
+    list_filter = ("website", "date", "is_up", "message")
+    search_fields = ("website", "date", "is_up", "message")
