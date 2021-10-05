@@ -19,4 +19,7 @@ class CheckWebsite(models.Model):
             return self.website.host +"is up"
         else:
             return self.website.host +"is down"
+
+class WebsiteListView(models.Model):
+    model = Website
     

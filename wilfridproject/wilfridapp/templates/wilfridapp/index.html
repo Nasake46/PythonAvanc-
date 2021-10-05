@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Website Watch</title>
+</head>
+<body>
+    <h1>Website Watch</h1>
+    <ul>
+    {% for website in websites %}
+        <li>{{ website.host }} {% if website.is_up %}✓{% else %}✗{% endif %}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
